@@ -16,7 +16,7 @@ class Game< Gosu::Window
 
   def initialize
     super(SCREEN_WIDTH, SCREEN_HEIGHT, false)
-    @background = Gosu::Image.new('img/gamegear.jpg', options = {} )
+    @background = Gosu::Image.new(self, 'img/gamegear.jpg')
     @large_font = Gosu::Font.new(self, "Futura", SCREEN_HEIGHT / 20)
     @curser = Cursor.new(self, true)
     @player_choices = [Rock.new(80, 300, self), Paper.new(80, 475, self), Scissors.new(80, 650, self)]
